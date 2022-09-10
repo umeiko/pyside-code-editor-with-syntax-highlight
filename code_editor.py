@@ -369,9 +369,9 @@ def open_file(fName:str):
     codeEditor.setWindowTitle(fName)
     if fName.split(".")[-1] != "py":
         try:
-            codeEditor.QCodeEditor.lex = guess_lexer_for_filename(fName, "")
+            codeEditor.lex = guess_lexer_for_filename(fName, "")
         except:
-            codeEditor.QCodeEditor.lex = None
+            codeEditor.lex = None
     codeEditor.fName = fName
     codeEditor.resize(800, 800)
     codeEditor.zoomIn(5)
